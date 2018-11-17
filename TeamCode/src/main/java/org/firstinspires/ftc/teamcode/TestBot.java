@@ -35,19 +35,21 @@ public class TestBot extends OpMode {
 
         FrontR = hardwareMap.dcMotor.get("motor_3");
         FrontL = hardwareMap.dcMotor.get("motor_4");
-        BackR = hardwareMap.dcMotor.get("motor_2");
-        BackL = hardwareMap.dcMotor.get("motor_1");
+        BackR = hardwareMap.dcMotor.get("motor_1");
+        BackL = hardwareMap.dcMotor.get("motor_2");
         ArmHinge = hardwareMap.dcMotor.get("motor_5");
 
-        FrontL.setDirection(DcMotor.Direction.REVERSE);
-        BackL.setDirection(DcMotor.Direction.REVERSE);
+        FrontR.setDirection(DcMotor.Direction.REVERSE);
+        BackR.setDirection(DcMotor.Direction.REVERSE);
 
-        Claw = hardwareMap.servo.get("servo_1");
-        Extender = hardwareMap.servo.get("servo_2");
+
+        Claw = hardwareMap.servo.get("servo1");
+        Extender = hardwareMap.servo.get("servo2");
 
 
         Claw.setPosition(.5);
         Extender.setPosition(.5);
+
 
     }
 
@@ -65,6 +67,8 @@ public class TestBot extends OpMode {
         BackL.setPower(LeftY);
         FrontR.setPower(RightY);
         BackR.setPower(RightY);
+
+
 
 
     }
